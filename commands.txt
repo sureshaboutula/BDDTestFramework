@@ -1,0 +1,5 @@
+*** behave
+### behave --no-capture
+### behave --no-capture -t @tagname
+### behave --no-capture -f allure_behave.formatter:AllureFormatter -o AllureReports
+### allure serve AllureReports
