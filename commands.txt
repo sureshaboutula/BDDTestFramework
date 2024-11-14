@@ -3,3 +3,21 @@
 ### behave --no-capture -t @tagname
 ### behave --no-capture -f allure_behave.formatter:AllureFormatter -o AllureReports
 ### allure serve AllureReports
+
+### pip install -r requirements.txt
+### pip freeze > requirements.txt
+
+# Initial Git commit
+## git init
+## git add .
+## git commit -m "Initial commit"
+## git remote add origin https://github.com/your-username/your-repo.git
+## git push -u origin master
+
+# Changes Git commit
+## git status
+## git add . or git add file1.py file2.js
+## git commit -m "Update code with new features/fix bugs"
+## git push origin master
+
+ 
