@@ -31,7 +31,7 @@ def verify_bookingid(context):
 #@regression @get @random_bookingid
 @given('A booking id and payload')
 def step_bookid(context):
-    print(context.random_bookingid)
+    #print(context.random_bookingid)
     context.bookingid = context.random_bookingid
     context.url = getConfig()['API']['base_url'] + ApiResources.get_single_booking + str(context.bookingid)
     context.headers = Utils().common_headers()
@@ -106,8 +106,8 @@ def verify_update_request_response(context):
 # @regression @fullupdate @create_token @create_bookingid @put
 @given('API details for full update request')
 def put_request_details_step(context):
-    print(context.booking_id)
-    print(context.token)
+    #print(context.booking_id)
+    #print(context.token)
     context.url = getConfig()['API']['base_url']+ApiResources.update+str(context.booking_id)
     context.json = payload_update()
     context.header = Utils().common_headers_with_cookie(context.token)
@@ -147,7 +147,7 @@ def verify_delete_response(context):
 @Then('verify updated get Operation throws 404 error')
 def verify_get_on_deleted_id(context):
     context.url = getConfig()['API']['base_url'] + ApiResources.get_single_booking + str(context.booking_id)
-    print(context.url)
+    #print(context.url)
     context.headers = Utils().common_headers()
     context.get_response = requests.get(url=context.url, headers=context.headers)
     #print(context.get_response)
